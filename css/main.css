@@ -4140,59 +4140,6 @@ select {
   }
 }
 /*!========================================================================
- * 53. Social
- * ======================================================================!*/
-.social {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  margin: -8px;
-}
-
-.social__item {
-  display: inline-block;
-  margin: 8px;
-}
-.social__item a {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
-  border-radius: 100%;
-  background-image: none;
-}
-.social__item a:after {
-  content: "";
-  display: block;
-  border-radius: 100%;
-  border: 1px solid #b0b0b0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform: scale(0);
-  transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
-.social__item a:hover {
-  opacity: 1;
-}
-.social__item a:hover:after {
-  transform: scale(1);
-}
-
-@media screen and (max-width: 991px) {
-  .social__item a {
-    width: 40px;
-    height: 40px;
-    font-size: 14px;
-  }
-}
-/*!========================================================================
  * 54. Spinner
  * ======================================================================!*/
 .spinner {
@@ -4273,34 +4220,7 @@ select {
     left: 30px;
   }
 }
-/*!========================================================================
- * 55. Tags
- * ======================================================================!*/
-.tagcloud ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-.tagcloud ul li {
-  display: inline-block !important;
-  margin-bottom: 0 !important;
-}
-.tagcloud a {
-  display: inline-block;
-  font-size: 12px !important;
-  line-height: 1;
-  color: #181818;
-  background-color: #f2f2f2;
-  padding: 11px 15px;
-  margin-bottom: 6px;
-  margin-right: 4px;
-  border-radius: 100px;
-  background-image: none;
-}
-.tagcloud a:hover {
-  background-color: #d6d7d9;
-  opacity: 1;
-}
+
 
 /*!========================================================================
  * 56. Split Text
@@ -4450,465 +4370,17 @@ a:focus {
   small { display: inline-block; font-size: 12px; }
 }
 
-/*!========================================================================
- * 58. Utilities
- * ======================================================================!*/
-.text-left {
-  text-align: left !important;
-}
-.text-left .section__headline {
-  margin-right: auto;
+
+.white-text {
+  color: #fff;
 }
 
-.text-center {
-  text-align: center !important;
-}
-.text-center .section__headline {
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.text-right {
-  text-align: right !important;
-}
-.text-right .section__headline {
-  margin-left: auto;
-}
-
-.row-80 {
-  margin-left: -40px;
-  margin-right: -40px;
-}
-
-.overflow {
-  position: relative;
-  overflow: hidden;
-}
-
-.overflow__curtain {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 50;
-}
-
-.overflow__content {
-  width: 100%;
-  height: 100%;
-}
-
-.position-relative {
-  position: relative;
-}
-
-.color-white {
-  color: #ffffff !important;
-}
-
-.color-black {
-  color: #0f0f0f !important;
-}
-
-.color-dark {
-  color: #181818 !important;
-}
-
-.blurred {
-  filter: blur(7px);
-}
-
-.of-cover {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  font-family: "object-fit: cover;";
-}
-
-.of-contain {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  font-family: "object-fit: contain;";
-}
-
-.split-line {
-  overflow: hidden;
-}
-
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.no-gutters {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.grayscale {
-  filter: grayscale(70%);
-}
-
-.h-100 {
-  height: 100%;
-}
-
-.lockhover .menu-overlay > li > a:not(.selected) {
-  opacity: 0.2;
-  pointer-events: none;
-}
-.lockhover .menu-overlay .sub-menu > li > a:not(.selected) {
-  opacity: 0.2;
-  pointer-events: none;
-}
-
-#js-webgl {
-  display: none;
-  width: 1px;
-  height: 1px;
-}
-
-/*!========================================================================
- * 59. Widget
- * ======================================================================!*/
-.widget p:last-of-type {
-  margin-bottom: 0;
-}
-.widget select {
-  width: 100%;
-  max-width: 100%;
-}
-.widget ul:not(.social) {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
-.widget ul:not(.social) li {
-  display: block;
-  margin-bottom: 20px;
-}
-.widget ul:not(.social) li a:hover {
-  color: var(--color-accent-primary);
-}
-.widget ul:not(.social) li:last-child {
-  margin-bottom: 0;
-}
-.widget ul:not(.social) ul {
-  width: 100%;
-  padding-left: 1em;
-  margin-top: 1em;
-}
-.widget ul li a {
-  background-image: none;
-}
-
-.widgettitle {
-  display: block;
-  font-family: "Helvetica Neue Thin", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 1.5em;
-}
-.widgettitle:before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #181818;
-  margin-bottom: 0.5em;
-}
-
-/*!========================================================================
- * 60. Widget Archive
- * ======================================================================!*/
-.widget_archive ul li {
-  display: flex !important;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.widget_archive ul li span {
-  color: #181818;
-}
-
-/*!========================================================================
- * 61. Widget Calendar
- * ======================================================================!*/
-#wp-calendar {
-  width: 100%;
-  text-align: center;
-}
-#wp-calendar caption {
-  caption-side: top;
-  width: 100%;
-  text-align: center;
-  padding-top: 0;
-  padding-bottom: 10px;
-}
-#wp-calendar th {
-  font-weight: 600;
-  padding: 5px;
-  text-align: center;
-}
-#wp-calendar td {
-  padding: 5px;
-  color: #181818;
-}
-#wp-calendar td#next {
-  text-align: right;
-}
-#wp-calendar td#prev {
-  text-align: left;
-}
-#wp-calendar tr {
-  border-bottom: none;
-}
-
-/*!========================================================================
- * 62. Widget Categories
- * ======================================================================!*/
-.widget_categories ul li {
-  display: flex !important;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.widget_categories ul li span {
-  color: #888888;
-  font-size: 13px;
-  line-height: 1;
-}
-
-/*!========================================================================
- * 63. Widget Logo
- * ======================================================================!*/
-.widget_ruben_logo {
-  max-width: 360px;
-}
-.widget_ruben_logo .logo {
-  margin-bottom: 2em;
-}
-
-@media screen and (max-width: 991px) {
-  .widget_ruben_logo {
-    max-width: 100%;
-  }
-  .widget_ruben_logo .logo {
-    margin-bottom: 1em;
-  }
-}
-/*!========================================================================
- * 64. Widget Nav Menu
- * ======================================================================!*/
-.widget_nav_menu ul.menu > li {
-  margin-bottom: 1em !important;
-  white-space: normal;
-  word-break: break-word;
-}
-.widget_nav_menu ul.menu > li a {
-  display: inline-block;
-  padding: 0;
-  font-size: 16px;
-}
-.widget_nav_menu ul.menu > li a:after, .widget_nav_menu ul.menu > li a:before {
-  display: none;
-}
-.widget_nav_menu ul.menu > li.menu-item-has-children {
-  margin-bottom: 1.5em !important;
-}
-.widget_nav_menu ul.menu > li.menu-item-has-children a:after {
-  display: none;
-}
-.widget_nav_menu ul.sub-menu {
-  background-color: transparent;
-  position: relative;
-  top: auto;
-  left: auto;
-  right: auto;
-  opacity: 1;
-  visibility: visible;
-  box-shadow: none;
-  border-bottom: none;
-  transform: none;
-  margin-top: 1em;
-}
-.widget_nav_menu ul.sub-menu > li a {
-  padding: 3px 0;
-}
-
-/*!========================================================================
- * 65. Widget RSS
- * ======================================================================!*/
-.widget_rss .rsswidget {
-  font-weight: 600;
-}
-.widget_rss .rss-date {
-  display: block;
-  width: 100%;
-  font-size: 13px;
-  margin-top: 0.5em;
-  margin-bottom: 1em;
-}
-.widget_rss .rssSummary {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-.widget_rss ul > li {
-  border-bottom: 1px solid rgba(176, 176, 176, 0.3);
-  padding-bottom: 1em;
-}
-.widget_rss ul > li:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-/*!========================================================================
- * 66. Widget Recent Comments
- * ======================================================================!*/
-/*!========================================================================
- * 67. Widget Recent Entries
- * ======================================================================!*/
-.widget_recent_entries .post-date {
-  display: block;
-  width: 100%;
-  font-size: 13px;
-  margin-top: 0.25em;
-  color: #888888;
-}
-.widget_recent_entries ul li {
-  padding: 20px 0;
-  margin-bottom: 0 !important;
-  border-bottom: 1px solid rgba(176, 176, 176, 0.3);
-}
-.widget_recent_entries ul li:first-child {
-  padding-top: 0;
-}
-.widget_recent_entries ul li:last-child {
-  padding-bottom: 0;
-  border-bottom: none;
-}
 
 .slider__dot { display: none; }
 .slider__dot._visible { display: inline-block; }
 
-.talent-list {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
-  margin-right: 150px;}
-.talent-list li {
-  margin-bottom: 0.5em; /* Opcional: separa los nombres */
-}
 
-/* Scrollbar fino y elegante solo para la lista de talentos */
-.talent-list-block {
-  height: 60vh;
-  min-height: 120px;
-  max-height: 60vh;
-  overflow-y: auto;
-  width: 100%;
-  scrollbar-width: thin;                  /* Firefox */
-  scrollbar-color: #b0b0b0 transparent;   /* Firefox */
-  outline: none;
-}
-
-/* Asegura que el bloque de email y la lista de talentos tienen el mismo ancho y alineación */
-.header__wrapper-property {
-  margin-top: -60px;
-  width: 350px;         /* igual que tu lista de talentos */
-  min-width: 420px;
-  max-width: 600px;
-  margin-left: 0;
-  margin-right: 0;
-  text-align: left;
-  box-sizing: border-box;
-}
-
-.figure-property {
-  width: 100%;
-  text-align: left;
-  margin-top: -20px;
-}
-
-.figure-property__content,
-.figure-property__list,
-.figure-property__item,
-.figure-property__wrapper-heading {
-  text-align: left;
-}
-/* Webkit (Chrome, Edge, Safari) */
-.talent-list-block::-webkit-scrollbar {
-  width: 5px;
-  background: transparent;
-}
-.talent-list-block::-webkit-scrollbar-thumb {
-  background: #b0b0b0;
-  border-radius: 6px;
-  min-height: 30px;
-  opacity: 0.7;
-}
-.talent-list-block::-webkit-scrollbar-thumb:hover {
-  background: #888888;
-}
-/* Quitar subrayado y fondo de los enlaces de la lista de talentos */
-.talent-list a {
-  background-image: none !important;
-  text-decoration: none !important;
-}
-
-
-.menu-overlay__item-wrapper .split-chars {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 50; /* Thin/ExtraLight */
-  letter-spacing: 0.03em;
-}
-
-@media (max-width: 1024px) {
-  .header__wrapper-property {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 95vw !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    text-align: center !important;
-    box-sizing: border-box;
-  }
-  .figure-property {
-    width: 100% !important;
-    text-align: center !important;
-  }
-  .figure-property__content,
-  .figure-property__list,
-  .figure-property__item,
-  .figure-property__wrapper-heading {
-    text-align: center !important;
-  }
-  .talent-list-block {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100% !important;
-    max-width: 95vw !important;
-  }
-  .talent-list {
-    margin-right: 0 !important;
-    text-align: center !important;
-    width: 100% !important;
-  }
-  .talent-list li {
-    width: 100% !important;
-  }
-}
 
 /* Sombra para mejorar legibilidad sobre fondos claros */
 .header,
@@ -4929,130 +4401,16 @@ a:focus {
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35));
 }
 
-/* filepath: e:\OLGA DE PALMA\LINEUP\css\main.css */
-.slider-headings__slide h2,
-.slider-headings__slide .subtitulo,
-.slider-headings__slide p {
-  opacity: 1 !important;
-  transform: none !important;
-  transition: none !important;
-}
-.split-chars,
-.split-chars__char,
-.split-text,
-.split-text__word {
+it-text__word {
   opacity: 1 !important;
   visibility: visible !important;
   transform: none !important;
   transition: none !important;
 }
 
-/* bar search.css */
-.talent-search-bar input {
-  width: 100%;
-  padding: 8px 12px;
-  border-radius: 6px;
-  border: 1px solid #fff;
-  font-size: 1rem;
-  background: transparent;
-  color: #fff;
-  outline: none;
-  box-shadow: none;
-  transition: border-color 0.2s;
-}
-.talent-search-bar input::placeholder {
-  color: #fff;
-  opacity: 0.7;
-}
 
-@media (max-width: 767px) {
-  .figure-property {
-    margin-top: 10px !important; /* Ajusta el valor según lo que necesites */
-  }
-}
 
-.header__wrapper-overlay-menu:not(.opened),
-.header__wrapper-overlay-menu[style*="pointer-events: none"] {
-  pointer-events: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-}
 
-/* Centrar y agrandar nombres/categoría en móvil */
-@media (max-width: 768px) {
-  .slider-headings__link {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 30px;
-    text-align: center;
-    width: 100%;
-    z-index: 2;
-    margin-bottom: 50px;
-    
-  }
-  .slider-headings__link h2 {
-    font-size: 2.1rem;
-    line-height: 1.2;
-    margin: 0;
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    font-weight: 600;
-  }
-  .slider-headings__link .subtitulo {
-    display: block;
-    font-size: 1.2rem;
-    margin-top: 6px;
-    font-weight: 400;
-    color: #ffe;
-    letter-spacing: 1px;
-  }
-}
-
-@media (max-width: 768px) {
-  .header__wrapper-menu {
-    margin-top: 30px; /* Ajusta el valor según la altura de tu header */
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .slider-headings__link {
-    margin-top: 300px; /* Ajusta este valor según lo que necesites */
-  }
-}
-
-.only-mobile-title {
-  display: none;
-  text-align: center;
-  padding-top: 100px;
-}
-
-only-mobile-title {
-  display: none;
-}
-
-@media screen and (max-width: 991px) {
-  .only-mobile-title {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 100%;
-    position: absolute;
-    bottom: 130px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 10;
-    font-size: 35px;
-  }
-
-  .only-mobile-title h2 {
-    color: white;
-    font-size: 35px;
-    text-transform: uppercase;
-    margin: 0;
-  }
-}
 
 
 @media (max-width: 991px) {
@@ -5068,237 +4426,6 @@ only-mobile-title {
 }
 
 
-
-
-/*BG MOVIL*/
-
-@media screen and (max-width: 768px) {
-  .aicha {
-    background-position: 40% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .amaral {
-    background-position: 220% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .beele {
-    background-position: 20% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .camilo {
-    background-position: 20% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .damiano {
-    background-position: 20% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .jlo {
-    background-position: 45% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .kany {
-    background-position: 65% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .leiva {
-    background-position: 30% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .kali {
-    background-position: 45% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .luz {
-    background-position: 45% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .maluma {
-    background-position: 60% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .manolo {
-    background-position: 40% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .turizo {
-    background-position: 70% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .milo {
-    background-position: 55% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .ozuna {
-    background-position: 40% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .mami {
-    background-position: 40% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .raw {
-    background-position: 40% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .residente {
-    background-position: 30% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .ricky {
-    background-position: 40% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .rozalen {
-    background-position: 30% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .enrique {
-    background-position: 40% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .twin {
-    background-position: 40% center !important; /* Ajusta según lo que quieras mostrar */
-  }
-}
-
-/*MOV WEB*/
-@media screen and (max-width: 768px) {
-  #a2.slider-headings__slide {
-    background-image: url('/img/fotos_mobile/villaverde-mobile.jpeg') !important;
-    background-position: center !important;
-    background-size: cover !important;
-  }
-
-
-
-  #c55.slider-headings__slide {
-    background-image: url('/img/fotos_mobile/luzgaggi-mobile.jpeg') !important;
-    background-position: center !important;
-    background-size: cover !important;
-  }
-
-  #c26.slider-headings__slide {
-    background-image: url('/img/fotos_mobile/rozalen-mobile.jpeg') !important;
-    background-position: center !important;
-    background-size: cover !important;
-  }
-
-  #c47.slider-headings__slide {
-    background-image: url('/img/fotos_mobile/jlo-mobile.jpeg') !important;
-    background-position: center !important;
-    background-size: cover !important;
-  }
-
-
-  #c50.slider-headings__slide {
-    background-image: url('/img/fotos_mobile/kani-mobile.jpg') !important;
-    background-position: center !important;
-    background-size: cover !important;
-  }
-  #c9.slider-headings__slide {
-    background-image: url('/img/fotos_mobile/bbtricks-mobile.jpg') !important;
-    background-position: center !important;
-    background-size: cover !important;
-  }
-  #c7.slider-headings__slide {
-    background-image: url('/img/fotos_mobile/mena-mobile.jpg') !important;
-    background-position: center !important;
-    background-size: cover !important;
-  }
-  #c42.slider-headings__slide {
-    background-image: url('/img/fotos_mobile/emilia-mobile.jpg') !important;
-    background-position: center !important;
-    background-size: cover !important;
-  } 
-  #c3.slider-headings__slide {
-    background-image: url('/img/fotos_mobile/abraham-mobile.jpeg') !important;
-    background-position: center !important;
-   background-size: cover !important;
-  }
-}
-
-
-.coming-soon-slide {
-  background-color: black;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 100vh;
-  padding: 20px;
-}
-
-.coming-soon-content {
-  max-width: 600px;
-  width: 90%;
-}
-
-.coming-soon-content h2 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  line-height: 1.3;
-}
-
-.submensaje {
-  font-size: 1rem;
-  font-weight: 100;
-  opacity: 0.8;
-}
-
-@media screen and (max-width: 768px) {
-  .coming-soon-content h2 {
-    font-size: 1.5rem;
-  }
-
-  .submensaje {
-    font-size: 0.9rem;
-  }
-}
 
 
 
@@ -5327,7 +4454,7 @@ only-mobile-title {
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* 6 columnas */
   grid-template-rows: repeat(3, auto); /* 3 filas */
-  gap: 0px; /* Espaciado entre las tarjetas */
+  gap: 20px; /* Espaciado entre las tarjetas */
   padding: 100px;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
@@ -5428,4 +4555,58 @@ only-mobile-title {
   text-transform: none; /* Sin transformación, respeta mayúsculas y minúsculas */
   letter-spacing: 0.03em; /* Espaciado entre letras */
   color: #fff; /* Color blanco */
+}
+
+
+.contact-olga-global {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0 60px 0;
+  width: 100vw;
+  min-height: 220px;
+  gap: 12px;
+}
+.contact-olga-global .logo__img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35));
+}
+
+.contact-olga__name {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 2rem !important; /* Fuerza tamaño pequeño */
+  font-weight: 200;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.1em;
+  text-transform: none;
+}
+
+.contact-olga__mail:hover {
+  text-decoration: underline;
+  opacity: 0.7;
+}
+.contact-olga__button {
+  display: inline-block;
+  background: #fff;
+  color: #181818;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 10px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
+}
+.contact-olga__button:hover {
+  background: #e0e0e0;
+  color: #181818;
+  opacity: 0.85;
 }
