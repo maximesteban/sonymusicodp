@@ -2758,3 +2758,14 @@ function runOnHighPerformanceGPU() {
 })(jQuery);
 
 
+function showPopup(name) {
+  const popup = document.getElementById('popup');
+  const popupContent = document.getElementById('popup-content');
+  popupContent.textContent = name; // Muestra el nombre del talento
+  popup.classList.add('active'); // Activa el pop-up
+}
+
+function closePopup() {
+  const popup = document.getElementById('popup');
+  popup.classList.remove('active'); // Oculta el pop-up
+}
