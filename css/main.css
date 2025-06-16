@@ -4606,7 +4606,7 @@ it-text__word {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas en móvil */
     gap: 15px; /* Espaciado entre las tarjetas */
-    padding: 100px 20px; /* Espaciado interno del contenedor */
+    padding: 80px 20px; /* Espaciado interno del contenedor */
   }
 
   .artist-card {
@@ -4614,12 +4614,12 @@ it-text__word {
   }
 }
 
-/* Oculta los nombres en dispositivos móviles */
+
 @media screen and (max-width: 768px) {
   .artist-card span {
 font-size: 12px; /* Tamaño más pequeño en móvil */ 
 background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
-  padding: 2px 2px; /* Espaciado interno del texto */ }
+padding: 2px 2px; /* Espaciado interno del texto */ }
 }
 
 
@@ -4649,7 +4649,7 @@ background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibi
 
 /* Estilo para el nombre */
 .footer-name {
-  font-weight: bold; /* Texto en negrita */
+  font-weight: 300; /* Texto en negrita */
   font-size: 25px; /* Tamaño de texto */
 }
 
@@ -4657,7 +4657,7 @@ background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibi
 .footer-link {
   text-decoration: none; /* Elimina el subrayado */
   color: #ffffff; /* Color del texto */
-  font-weight: bold; /* Texto en negrita */
+  font-weight: 100; /* Texto en negrita */
   font-size: 25px; /* Tamaño de texto */
 }
 
@@ -4708,4 +4708,12 @@ background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibi
   }
 
   
+}
+
+@media screen and (max-width: 768px) {
+  html, body {
+    overflow: hidden; /* Oculta el scroll */
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100%; /* Ocupa todo el alto */
+  }
 }
