@@ -647,7 +647,7 @@ div[class*=bg-image-] {
  * 8. Figure Logo
  * ======================================================================!*/
 .logo__img {
-  height: 120px;/* ajusta según el tamaño deseado */
+  height: 250px;/* ajusta según el tamaño deseado */
   width: auto;
   display: block;
 }
@@ -4492,7 +4492,7 @@ it-text__word {
   color: white; /* Color del texto */
   text-transform: uppercase; /* Texto en mayúsculas */
   background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
-  padding: 5px 10px; /* Espaciado interno del texto */
+  padding: 5px 5px; /* Espaciado interno del texto */
 }
 
 
@@ -4600,54 +4600,112 @@ it-text__word {
 
 
 
-/* Ajusta el diseño en pantallas pequeñas */
+/* Responsivo: Ajusta el diseño solo en pantallas pequeñas */
 @media screen and (max-width: 768px) {
   .sony-grid {
-    grid-template-columns: repeat(3, 1fr); /* Mantén 2 columnas */
-    grid-auto-rows: 10px; /* Ajusta las filas automáticamente */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en móvil */
+    gap: 15px; /* Espaciado entre las tarjetas */
+    padding: 100px 20px; /* Espaciado interno del contenedor */
   }
-}
 
-/* Ajusta el diseño en pantallas muy pequeñas */
-@media screen and (max-width: 480px) {
-  .sony-grid {
-    grid-template-columns: repeat(3, 1fr); /* Mantén 2 columnas */
-    gap:15px; /* Reduce el espaciado entre las tarjetas */
+  .artist-card {
+    max-width: 100%; /* La tarjeta ocupa todo el ancho disponible */
   }
 }
 
 /* Oculta los nombres en dispositivos móviles */
 @media screen and (max-width: 768px) {
   .artist-card span {
-    display: none; /* Oculta el nombre */
+font-size: 12px; /* Tamaño más pequeño en móvil */ 
+background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+  padding: 2px 2px; /* Espaciado interno del texto */ }
+}
+
+
+
+/* Contenedor del logo */
+.logo-container {
+  text-align: center; /* Centra el logo horizontalmente */
+  margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.logo__img_footer {
+  width: 200px; /* Tamaño más grande del logo */
+  height: auto; /* Mantén la proporción del logo */
+}
+
+/* Contenedor principal */
+.footer-container {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  gap: 100px; /* Espaciado horizontal entre los elementos */
+  padding: 0 20px; /* Espaciado lateral */
+  font-family: 'Montserrat', sans-serif; /* Fuente */
+  font-size: 25px; /* Tamaño de texto */
+  color: #ffffff; /* Color del texto */
+}
+
+/* Estilo para el nombre */
+.footer-name {
+  font-weight: bold; /* Texto en negrita */
+  font-size: 25px; /* Tamaño de texto */
+}
+
+/* Estilo para los enlaces */
+.footer-link {
+  text-decoration: none; /* Elimina el subrayado */
+  color: #ffffff; /* Color del texto */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 25px; /* Tamaño de texto */
+}
+
+.footer-link i {
+  margin-right: 8px; /* Espaciado entre el icono y el texto */
+  font-size: 25px; /* Tamaño más grande del icono */
+}
+
+
+/* Responsivo: apila los elementos uno debajo del otro */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Cambia la dirección a columna */
+    gap: 15px; /* Reduce el espaciado entre los elementos */
+    align-items: center; /* Alinea los elementos a la izquierda */
+  }
+
+  .footer-link {
+    font-size: 16px; /* Reduce el tamaño del texto en pantallas pequeñas */
+  }
+
+  .footer-name {
+    font-size: 16px; /* Reduce el tamaño del texto en pantallas pequeñas */
   }
 }
 
-/* Estilo para el pop-up */
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
-  color: #fff; /* Texto blanco */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  display: none; /* Oculto por defecto */
+
+
+/* Estilo general para el logo */
+.logo__img_home {
+  width: 800px; /* Tamaño normal del logo */
+  height: auto; /* Mantén la proporción del logo */
 }
 
-
-.popup.active {
-  display: block; /* Muestra el pop-up cuando está activo */
+/* Responsivo: reduce el tamaño del logo en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .logo__img_home {
+    width: 270px; /* Tamaño más pequeño del logo */
+  }
 }
 
-.popup-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 16px;
-  color: #fff;
-  cursor: pointer;
+/* Elimina el scroll en escritorio */
+@media screen and (min-width: 1024px) {
+  html, body {
+    overflow: hidden; /* Oculta el scroll */
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100%; /* Ocupa todo el alto */
+  }
+
+  
 }
