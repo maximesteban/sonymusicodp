@@ -4495,22 +4495,7 @@ it-text__word {
   padding: 5px 10px; /* Espaciado interno del texto */
 }
 
-/* Ajusta el diseño en pantallas pequeñas */
-@media screen and (max-width: 768px) {
-  .sony-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
-    gap: 20px;
-    height: auto; /* Ajusta la altura para pantallas pequeñas */
-  }
 
-  .artist-card {
-    max-width: 180px; /* Tamaño reducido para pantallas pequeñas */
-  }
-
-  .artist-card span {
-    font-size: 0.8rem; /* Tamaño reducido del texto */
-  }
-}
 
 /* Estilos para el botón fijo */
 .fixed-button {
@@ -4609,4 +4594,60 @@ it-text__word {
   background: #e0e0e0;
   color: #181818;
   opacity: 0.85;
+}
+
+
+
+
+
+/* Ajusta el diseño en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .sony-grid {
+    grid-template-columns: repeat(3, 1fr); /* Mantén 2 columnas */
+    grid-auto-rows: 10px; /* Ajusta las filas automáticamente */
+  }
+}
+
+/* Ajusta el diseño en pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+  .sony-grid {
+    grid-template-columns: repeat(3, 1fr); /* Mantén 2 columnas */
+    gap:15px; /* Reduce el espaciado entre las tarjetas */
+  }
+}
+
+/* Oculta los nombres en dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .artist-card span {
+    display: none; /* Oculta el nombre */
+  }
+}
+
+/* Estilo para el pop-up */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none; /* Oculto por defecto */
+}
+
+
+.popup.active {
+  display: block; /* Muestra el pop-up cuando está activo */
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
 }
