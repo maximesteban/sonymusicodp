@@ -222,7 +222,7 @@
 <div id="lineup" class="swiper-slide slider-headings__slide" style="background-image: url('img/fotos/fondo.jpg'); background-size: cover; background-position: center;">
   <div class="slide-content">
     <a class="logo goto-slide" href="#lineup">
-      <img src="img/logo sony.svg" alt="Sony Music" class="logo__img">
+      <img src="img/logo sony.svg" alt="Sony Music" class="logo__img_home">
     </a>
     <h2 class="white-text">
   ARTIST ROSTER
@@ -310,11 +310,7 @@
   </div>
 </div>
 
-<!-- Pop-up -->
-<div id="popup" class="popup">
-  <span id="popup-content"></span>
-  <span class="popup-close" onclick="closePopup()">X</span>
-</div>
+
 
 <!-- Slide 2 -->
 <div class="swiper-slide slider-headings__slide sony-slide" id="sony-slide-2" data-slide="sony-slide-2" style="background-image: url('img/fotos/fondo.jpg'); background-size: cover; background-position: center;">
@@ -392,15 +388,12 @@
         <img src="img/fotos/liakali.jpeg" alt="Lia Kali">
         <span>LIA KALI</span>
       </div>
+
     </div>
   </div>
 </div>
 
-<!-- Pop-up -->
-<div id="popup" class="popup">
-  <span id="popup-content"></span>
-  <span class="popup-close" onclick="closePopup()">X</span>
-</div>
+
 
 <!-- Slide Galería Sony 3 -->
 <div class="swiper-slide slider-headings__slide sony-slide" id="sony-slide-3" style="background-image: url('img/fotos/fondo.jpg'); background-size: cover; background-position: center;">
@@ -526,10 +519,10 @@
         <img src="img/fotos/tokisha.jpeg" alt="Tokisha">
         <span>TOKISHA</span>
       </div>
-      <div class="artist-card" onclick="showPopup('TRUENO')">
+      <!--<div class="artist-card" onclick="showPopup('TRUENO')">
         <img src="img/fotos/trueno.jpeg" alt="Trueno">
         <span>TRUENO</span>
-      </div>
+      </div>-->
       <div class="artist-card" onclick="showPopup('VICCO')">
         <img src="img/fotos/vicco.jpeg" alt="Vicco">
         <span>VICCO</span>
@@ -538,21 +531,26 @@
   </div>
 </div>
 
-<!-- Pop-up -->
-<div id="popup" class="popup">
-  <span id="popup-content"></span>
-  <span class="popup-close" onclick="closePopup()">X</span>
-</div>
+
 <!-- Contacto Olga de Palma visible SIEMPRE -->
 
 <div id="lineup" class="swiper-slide slider-headings__slide" style="background-image: url('img/fotos/fondo.jpg'); background-size: cover; background-position: center;">
   <div class="slide-content">
-    <div class="contact-olga-global">
-  <img src="img/OLGADEPALMA_SIMPLE.svg" alt="olgadepalma" class="logo__img">
-  <h2 class="contact-olga__name">Olga de Palma</h2>
-  <a href="mailto:olga@olgadepalma.com" class="contact-olga__button">Contactar</a>
+    <!-- Logo en una fila superior -->
+    <div class="logo-container">
+      <img src="img/OLGADEPALMA_SIMPLE.svg" alt="olgadepalma" class="logo__img_footer">
+    </div>
+   <!-- Información en una fila inferior -->
+<div class="footer-container">
+  <span class="footer-name"><strong>Olga de Palma</strong></span>
+  <a href="mailto:olga@olgadepalma.com" class="footer-link">
+    <i class="fa fa-envelope"></i> olga@olgadepalma.com
+  </a>
+  <a href="https://instagram.com/olgadepalma" target="_blank" class="footer-link">
+    <i class="fa fa-instagram"></i> @olgadepalma
+  </a>
 </div>
-</div>
+  </div>
 </div>
 <!-- - background images -->
 <div class="slider-headings__footer">
@@ -653,6 +651,7 @@ document.addEventListener('overlayMenuClosed', function() {
     slider.focus({ preventScroll: true });
   }
 });
+
 </script>
 
 <script src="js/vendor.js"></script>
