@@ -4645,11 +4645,13 @@ padding: 2px 2px; /* Espaciado interno del texto */ }
   font-family: 'Montserrat', sans-serif; /* Fuente */
   font-size: 25px; /* Tamaño de texto */
   color: #ffffff; /* Color del texto */
+  font-weight: 100 !important;
+  
 }
 
 /* Estilo para el nombre */
 .footer-name {
-  font-weight: 300; /* Texto en negrita */
+  font-weight: 100 !important; /* Texto en negrita */
   font-size: 25px; /* Tamaño de texto */
 }
 
@@ -4657,7 +4659,7 @@ padding: 2px 2px; /* Espaciado interno del texto */ }
 .footer-link {
   text-decoration: none; /* Elimina el subrayado */
   color: #ffffff; /* Color del texto */
-  font-weight: 100; /* Texto en negrita */
+  font-weight: 100 !important; /* Texto en negrita */
   font-size: 25px; /* Tamaño de texto */
 }
 
@@ -4673,14 +4675,17 @@ padding: 2px 2px; /* Espaciado interno del texto */ }
     flex-direction: column; /* Cambia la dirección a columna */
     gap: 15px; /* Reduce el espaciado entre los elementos */
     align-items: center; /* Alinea los elementos a la izquierda */
+    font-weight: 100 !important; /* Texto en negrita */ 
   }
 
   .footer-link {
     font-size: 16px; /* Reduce el tamaño del texto en pantallas pequeñas */
+    font-weight: 100; /* Texto en negrita */
   }
 
   .footer-name {
     font-size: 16px; /* Reduce el tamaño del texto en pantallas pequeñas */
+    font-weight: 100 !important; /* Texto en negrita */
   }
 }
 
@@ -4699,21 +4704,37 @@ padding: 2px 2px; /* Espaciado interno del texto */ }
   }
 }
 
-/* Elimina el scroll en escritorio */
-@media screen and (min-width: 1024px) {
-  html, body {
-    overflow: hidden; /* Oculta el scroll */
-    width: 100%; /* Ocupa todo el ancho */
-    height: 100%; /* Ocupa todo el alto */
+
+
+/* Responsive para tablets (iPads) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .sony-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en tablet */
+    gap: 20px;
+    padding: 80px 40px;
   }
 
-  
-}
+  .artist-card span {
+    font-size: 16px;
+    padding: 4px 6px;
+  }
 
-@media screen and (max-width: 768px) {
-  html, body {
-    overflow: hidden; /* Oculta el scroll */
-    width: 100%; /* Ocupa todo el ancho */
-    height: 100%; /* Ocupa todo el alto */
+  .footer-container {
+    flex-direction: row;
+    gap: 40px;
+    font-size: 20px;
+  }
+
+  .footer-link,
+  .footer-name {
+    font-size: 20px;
+  }
+
+  .logo__img_home {
+    width: 400px;
+  }
+
+  .logo__img_footer {
+    width: 150px;
   }
 }
