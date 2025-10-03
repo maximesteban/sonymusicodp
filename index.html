@@ -58,7 +58,29 @@
 
   </div>
 </header>
+<style>
+  /* Bloquear scroll vertical */
+html, body {
+    overflow: hidden !important;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
 
+.page-wrapper {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+    position: fixed;
+    width: 100%;
+}
+</style>
+  
 <!-- MENU CATEGORIAS 
 <div class="header__wrapper-overlay-menu">
 <div class="header__wrapper-menu">
