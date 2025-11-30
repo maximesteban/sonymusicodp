@@ -16,15 +16,72 @@
   font-style: normal;
 }
 
-/* Aplica Montserrat */
-h1, h2, h3, h4, h5, h6,
-body, p, span, li, a, div {
-  font-family: 'Montserrat', sans-serif !important;
+/* ============================
+   FONT: FAVORIT
+   ============================ */
+
+/* Light (300) */
+@font-face {
+  font-family: 'Favorit';
+  src: url('../fonts/Favorit_Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
 }
 
-/* Asegura que los iconos sigan funcionando */
-.material-icons {
-  font-family: 'Material Icons';
+/* Light Italic (300 italic) */
+@font-face {
+  font-family: 'Favorit';
+  src: url('../fonts/Favorit_Light-Italic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Regular (400) */
+@font-face {
+  font-family: 'Favorit';
+  src: url('../fonts/Favorit_Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Regular Italic (400 italic) */
+@font-face {
+  font-family: 'Favorit';
+  src: url('../fonts/Favorit_Regular-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Medium (500) */
+@font-face {
+  font-family: 'Favorit';
+  src: url('../fonts/Favorit_Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Medium Italic (500 italic) */
+@font-face {
+  font-family: 'Favorit';
+  src: url('../fonts/Favorit_Medium-Italic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Bold (700) */
+@font-face {
+  font-family: 'Favorit';
+  src: url('../fonts/Favorit_Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Bold Italic (700 italic) */
+@font-face {
+  font-family: 'Favorit';
+  src: url('../fonts/Favorit_Bold-Italic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
 }
 
 
@@ -4631,8 +4688,9 @@ padding: 2px 2px; /* Espaciado interno del texto */ }
 }
 
 .logo__img_footer {
-  width: 200px; /* Tamaño más grande del logo */
+  width: 800px; /* Tamaño más grande del logo */
   height: auto; /* Mantén la proporción del logo */
+  margin-bottom: 50px;
 }
 
 /* Contenedor principal */
